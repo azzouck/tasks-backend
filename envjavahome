@@ -1,0 +1,24 @@
+sudo apt-get install openjdk-8-jdk
+
+Usando os environment
+
+Uma das formas que pode configurar o JAVA_HOME é utilizando o arquivo /etc/environment.
+
+Para isso basta abrir o arquivo e adicionar a instrução, veja:
+
+sudo vi /etc/environment
+
+Ao final do arquivo adicione:
+
+JAVA_HOME="/usr/lib/jvm/java-9-oracle"
+
+    Note que o caminho depende do seu sistema operacional, você pode verificar o caminho completo usando o comando sudo update-alternatives --config java.
+
+Em seguida utilize o comando abaixo para recarregar as variáveis:
+
+source /etc/environment
+
+Para verificar se a configuração está ok, digite:
+
+echo $JAVA_HOME
+
